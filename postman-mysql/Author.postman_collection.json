@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "bce67bc7-716d-4146-89da-1f999ed3e36e",
+		"name": "Author",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29814090"
+	},
+	"item": [
+		{
+			"name": "Get All Authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{authorUrl}}/authors",
+					"host": [
+						"{{authorUrl}}"
+					],
+					"path": [
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Justin\",\r\n    \"country\":\"US\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{authorUrl}}/authors",
+					"host": [
+						"{{authorUrl}}"
+					],
+					"path": [
+						"authors"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "authorUrl",
+			"value": "http://localhost:8082",
+			"type": "string"
+		},
+		{
+			"key": "bookUrl",
+			"value": "http://localhost:8081",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
